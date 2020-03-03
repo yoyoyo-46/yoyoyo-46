@@ -1,0 +1,44 @@
+h1{
+	text-align:center;
+	margin-top:100px;
+}
+
+article{
+	height:450px;
+	width:400px;
+	border:3px solid #000;
+	margin:20px 10px;
+	float:left;
+}
+
+.image{
+	width:400px;
+	height:350px;
+	background-size:contain;
+	background-repeat:no-repeat;
+}
+
+.othello .image{
+	background-image:url(img/othello.png);
+}
+
+.work{
+	width:400px;
+	height:100px;
+	text-align:center;
+}
+
+article a{
+	font-size:40px;
+	font-weight:bold;
+	color:#000;
+	text-decoration:none;
+	border-bottom:5px double #0090a8;
+	transition:0.2s;
+}
+
+article a:hover{
+	color:#0090a8;
+	padding-left:30px;
+	padding-right:30px;
+}

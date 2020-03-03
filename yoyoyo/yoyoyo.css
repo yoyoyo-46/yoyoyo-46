@@ -1,0 +1,19 @@
+h1{
+	font-size:40px;
+}
+
+article{
+	width:1300px;
+	border-bottom:3px double #c0c0c0;
+	text-align:center;
+	float:left;
+}
+
+.tytle{
+	width:220px;
+	font-size:30px;
+	border-bottom:3px solid #0090a8;
+	margin-top:100px;
+	margin-left:auto;
+	margin-right:auto;
+}

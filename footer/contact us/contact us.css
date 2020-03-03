@@ -40,17 +40,19 @@ textarea{
   border:1px solid #000;
 }
 
-input[type="submit"]{
-  width:30%;
+article a{
+  display:block;
+  width:100px;
   background-color:#0090a8;
   color:#fff;
   padding:10px;
-  border:none;
-  border-radius:30px;
-  margin:20px 330px;
+  border-radius:20px;
+  margin:20px 400px;
+  text-decoration:none;
+  text-align:center;
   transition:0.3s;
 }
 
-input[type="submit"]:hover{
+article a:hover{
   opacity:0.6;
 }

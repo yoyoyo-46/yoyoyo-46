@@ -1,0 +1,182 @@
+body{
+	width:1300px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+span{
+	color:#0090a8;
+}
+
+header{
+	height:100px;
+	border-top:5px solid #0090a8;
+}
+
+header a{
+	margin-left:30px;
+	float:left;
+}
+
+header img{
+	width:46px;
+	height:46px;
+	margin:1px;
+	float:left;
+}
+
+.img1{
+	border-radius:50% 50% 0% 50%;
+}
+
+.img2{
+	border-radius:50% 50% 50% 0%;
+}
+
+.img3{
+	border-radius:50% 0% 50% 50%;
+	clear:left;
+}
+
+.img4{
+	border-radius:0% 50% 50% 50%;
+}
+
+header p{
+	font-size:80px;
+	display:inline;
+	margin-left:250px;
+}
+
+.nav1{
+	text-align:center;
+	vertical-align: middle;
+	margin-top:5px;
+}
+
+.nav1 a{
+	display:inline-block;
+	width:200px;
+	font-size:25px;
+	color:#fff;
+	background-color:#c0c6c9;
+	text-decoration:none;
+	padding:10px 0px;
+	border-bottom:2px solid #fff;
+	transition:0.5s;
+}
+
+.nav1 a:hover{
+	color:#000;
+	background-color:#fff;
+	padding-bottom:5px;
+	border-bottom:5px solid #0090a8;
+}
+
+.share{
+	margin-top:100px;
+	background-color:#d9faff;
+	text-align:center;
+}
+
+.share p{
+	display:inline;
+	font-size:30px;
+	font-weight:bold;
+	color:#000;
+}
+
+.share a{
+	display:inline-block;
+	width:100px;
+	height:90px;
+	padding-top:5px;
+	border-radius:10px;
+	margin:30px 40px;
+}
+
+.share a:hover{
+	opacity:0.8;
+}
+
+.share a:active{
+	transform:translateY(5px);
+	border-bottom:0px;
+}
+
+.share img{
+	width:100px;
+	height:90px;
+	border-radius:10px;
+}
+
+.line{
+	background-color:#00b900;
+	border-bottom:5px solid #109010;
+}
+
+.share .twitter{
+	background-color:#1da1f2;
+	border-bottom:5px solid #1479b8;
+}
+
+.facebook{
+	background-color:#3c5a99;
+	border-bottom:5px solid #1a3774;
+}
+
+.hatena{
+	background-color:#00a4de;
+	border-bottom:5px solid #037ca7;
+}
+
+.pocket{
+	background-color:#ee4056;
+	border-bottom:5px solid #9c3441;
+}
+
+footer{
+	height:150px;
+	width:1300px;
+	background-color:#000;
+	clear:left;
+}
+
+footer p{
+	font-size:30px;
+	color:#fff;
+	margin:5px 10px;
+	float:left;
+}
+
+.twitter{
+	clear:left;
+}
+
+footer img{
+	height:50px;
+	border:10px solid #000;
+	margin:10px 30px;
+	transition:0.3s;
+	float:left;
+}
+
+footer img:hover{
+	padding-bottom:5px;
+	border-bottom:5px solid #0090a8;
+}
+
+.link{
+	text-decoration:none;
+	font-size:15px;
+	color:#fff;
+	padding-bottom:5px;
+	border-bottom:2px solid #fff;
+	margin-right:40px;
+	transition:0.2s;
+	float:right;
+}
+
+.link:hover{
+	padding-bottom:10px;
+}

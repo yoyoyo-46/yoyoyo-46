@@ -56,7 +56,8 @@ article img{
 	width:110px;
 	color:#000;
 	font-size:40px;
-	padding:px;
+	padding:5px;
+	border:5px double #000;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:50px;

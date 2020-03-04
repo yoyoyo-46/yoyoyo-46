@@ -19,27 +19,25 @@ header a{
 }
 
 header img{
-	width:46px;
-	height:46px;
+	width:48px;
+	height:48px;
 	margin:1px;
 	float:left;
 }
 
 .img1{
-	border-radius:50% 50% 0% 50%;
+	border-radius:0% 100% 0% 100%;
 }
 
 .img2{
-	border-radius:50% 50% 50% 0%;
+	border-radius:100% 0% 100% 0%;
 }
 
 .img3{
-	border-radius:50% 0% 50% 50%;
+	width:20px;
+	margin-left:40px;
+	border-radius:0% 0% 50% 50%;
 	clear:left;
-}
-
-.img4{
-	border-radius:0% 50% 50% 50%;
 }
 
 header p{
@@ -57,82 +55,48 @@ header p{
 .nav1 a{
 	display:inline-block;
 	width:200px;
-	font-size:25px;
-	color:#fff;
-	background-color:#c0c6c9;
-	text-decoration:none;
+	font-size:30px;
 	padding:10px 0px;
-	border-bottom:2px solid #fff;
-	transition:0.5s;
+	border-bottom:2px solid #fff;;
+	color:#fff;
+	background-color:#0090a8;
+	text-decoration:none;
+	transition:0.3s;
 }
 
 .nav1 a:hover{
 	color:#000;
-	background-color:#fff;
-	padding-bottom:5px;
-	border-bottom:5px solid #0090a8;
+	padding-bottom:0px;
 }
 
-.share{
-	margin-top:100px;
-	background-color:#d9faff;
-	text-align:center;
+.C:hover{
+	border-bottom:10px solid #9a4fe9;
+	background-color:#efdfff;
 }
 
-.share p{
-	display:inline;
-	font-size:30px;
-	font-weight:bold;
-	color:#000;
+.HTMLCSS:hover{
+	border-bottom:10px solid #49ba80;
+	background-color:#afffd6;
 }
 
-.share a{
-	display:inline-block;
-	width:100px;
-	height:90px;
-	padding-top:5px;
-	border-radius:10px;
-	margin:30px 40px;
+.JavaScript:hover{
+	border-bottom:10px solid #274eb1;
+	background-color:#b9caf6;
 }
 
-.share a:hover{
-	opacity:0.8;
+.Ruby:hover{
+	border-bottom:10px solid #e23254;
+	background-color:#fbb2c0;
 }
 
-.share a:active{
-	transform:translateY(5px);
-	border-bottom:0px;
+.Java:hover{
+	border-bottom:10px solid #9d793c;
+	background-color:#e0c79c;
 }
 
-.share img{
-	width:100px;
-	height:90px;
-	border-radius:10px;
-}
-
-.line{
-	background-color:#00b900;
-	border-bottom:5px solid #109010;
-}
-
-.share .twitter{
-	background-color:#1da1f2;
-	border-bottom:5px solid #1479b8;
-}
-
-.facebook{
-	background-color:#3c5a99;
-	border-bottom:5px solid #1a3774;
-}
-
-.hatena{
-	background-color:#00a4de;
-	border-bottom:5px solid #037ca7;
-}
-
-.pocket{
-	background-color:#ee4056;
-	border-bottom:5px solid #9c3441;
+.Python:hover{
+	border-bottom:10px solid #00b6e2;
+	background-color:#a3ecfc;
 }
 
 footer{

@@ -19,25 +19,14 @@ header a{
 }
 
 header img{
-	width:48px;
-	height:48px;
-	margin:1px;
+	width:100px;
+	height:100px;
+	transition:0.2s;
 	float:left;
 }
 
-.img1{
-	border-radius:0% 100% 0% 100%;
-}
-
-.img2{
-	border-radius:100% 0% 100% 0%;
-}
-
-.img3{
-	width:20px;
-	margin-left:40px;
-	border-radius:0% 0% 50% 50%;
-	clear:left;
+header img:hover{
+	opacity:0.8;
 }
 
 header p{
@@ -113,21 +102,23 @@ footer p{
 	float:left;
 }
 
-.twitter{
+footer .line{
 	clear:left;
+}
+
+footer .line, .facebook{
+	border-radius:100%;
 }
 
 footer img{
 	height:50px;
-	border:10px solid #000;
 	margin:10px 30px;
 	transition:0.3s;
 	float:left;
 }
 
 footer img:hover{
-	padding-bottom:5px;
-	border-bottom:5px solid #0090a8;
+	opacity:0.8;
 }
 
 .link{

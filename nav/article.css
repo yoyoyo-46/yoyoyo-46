@@ -89,7 +89,7 @@ article img{
 	border-radius:10px;
 }
 
-.line{
+.share .line{
 	background-color:#00b900;
 	border-bottom:5px solid #109010;
 }
@@ -99,7 +99,7 @@ article img{
 	border-bottom:5px solid #1479b8;
 }
 
-.facebook{
+.share .facebook{
 	background-color:#3c5a99;
 	border-bottom:5px solid #1a3774;
 }

@@ -36,11 +36,11 @@ h1{
 	margin-top:100px;
 }
 
-.content{
+.object{
 	width:400px;
 	height:530px;
 	border:3px solid #000;
-	margin:20px 10px;
+	margin:20px 13px;
 	float:left;
 }
 
@@ -50,11 +50,11 @@ h1{
 	background-color:#9a4fe9;
 }
 
-.content p{
+.object p{
+	display:inline;
 	font-size:20px;
 	font-weight:bold;
 	color:#fff;
-	display:inline;
 	padding-left:5px;
 }
 
@@ -66,7 +66,7 @@ h1{
 	background-repeat:no-repeat;
 }
 
-.work{
+.content{
 	width:400px;
 	height:100px;
 	text-align:center;
@@ -75,14 +75,13 @@ h1{
 .content a{
 	font-size:40px;
 	font-weight:bold;
+	border-bottom:5px double #0090a8;
 	color:#000;
 	text-decoration:none;
-	border-bottom:5px double #0090a8;
 	transition:0.2s;
 }
 
 .content a:hover{
 	color:#0090a8;
-	padding-left:30px;
-	padding-right:30px;
+	padding:0px 30px;
 }

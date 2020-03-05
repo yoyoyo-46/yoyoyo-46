@@ -1,7 +1,7 @@
 .nav2{
 	width:150px;
 	padding:40px 20px 40px 20px;
-	border-right:3px solid #bababa;
+	background:rgba(0, 144, 168, 0.1);
 	text-align:center;
 	position:fixed;
 	float:left;
@@ -11,8 +11,8 @@
 	display:block;
 	font-size:20px;
 	padding:5px 0px;
-	border-left:1px solid #fff;
-	border-right:1px solid #fff;
+	border-left:1px solid rgba(#0090a8, 0.1);
+	border-right:1px solid rgba(#0090a8, 0.1);
 	color:#000;
 	text-decoration:none;
 	transition:0.3s;

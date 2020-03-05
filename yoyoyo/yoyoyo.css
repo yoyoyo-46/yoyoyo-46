@@ -9,7 +9,31 @@ article{
 	float:left;
 }
 
-.tytle{
+article p{
+	font-size:20px;
+}
+
+article a{
+	display:block;
+	font-size:30px;
+	width:200px;
+	padding:5px;
+	border:5px outset #0090a8;
+	margin:0px auto 100px auto;
+	color:#fff;
+	background-color:#0090a8;
+	text-decoration:none;
+}
+
+article a:hover{
+	opacity:0.8;
+}
+
+article a:active{
+	border:5px inset #0090a8;
+}
+
+.title{
 	width:220px;
 	font-size:30px;
 	border-bottom:3px solid #0090a8;

@@ -15,7 +15,7 @@
 	padding:10px;
 	border-bottom:5px solid #196e7c;
 	border-radius:10px;
-	margin-top:5px;
+	margin-top:3px;
 	margin-right:50px;
 	text-decoration:none;
 	float:right;
@@ -23,11 +23,11 @@
 
 .tytle a:hover{
 	margin-top:0px;
-	border-bottom:10px solid #196e7c;
+	border-bottom:8px solid #196e7c;
 }
 
 .tytle a:active{
-	margin-top:10px;
+	margin-top:8px;
 	border-bottom:0px;
 }
 

@@ -40,7 +40,7 @@ textarea{
   border:1px solid #000;
 }
 
-article a{
+.button{
   display:block;
   width:100px;
   background-color:#0090a8;

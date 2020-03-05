@@ -5,7 +5,7 @@ h1{
 
 article{
 	width:400px;
-	height:450px;
+	height:500px;
 	border:3px solid #000;
 	margin:20px 10px;
 	float:left;
@@ -13,7 +13,7 @@ article{
 
 .object img{
 	width:400px;
-	height:350px;
+	height:400px;
 	background-size:contain;
 	background-repeat:no-repeat;
 }

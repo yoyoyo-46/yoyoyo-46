@@ -1,87 +1,89 @@
-.tytle{
-	width:1300px;
-	font-size:25px;
-	text-align:center;
-	padding:50px 0px;
-	border-bottom:3px double #c0c0c0;
-	margin-bottom:50px;
-	float:left;
-}
-
-.tytle a{
-	display:block;
+.top-wrapper{
+	padding-top:320px;
+	padding-bottom:150px;
+	background-image:url(img/top.jpg);
+	background-size:cover;
 	color:#fff;
-	background-color:#0090a8;
-	padding:10px;
-	border-bottom:5px solid #196e7c;
-	border-radius:10px;
-	margin-top:3px;
-	margin-right:50px;
-	text-decoration:none;
-	float:right;
+	text-align:center;
+	opacity:0.9;
 }
 
-.tytle a:hover{
-	margin-top:0px;
-	border-bottom:8px solid #196e7c;
+.top-wrapper h1{
+	font-size:60px;
+	letter-spacing:6px;
+	line-height:80px;
 }
 
-.tytle a:active{
-	margin-top:8px;
-	border-bottom:0px;
+.top-wrapper p{
+	font-weight:bold;
 }
 
-h1{
-	margin-left:550px;
+.yoyoyo{
 	margin-top:100px;
+	background-color:#0090a8;
+	transition:0.3s;
 }
 
-.object{
-	width:400px;
-	height:530px;
-	border:3px solid #000;
-	margin:20px 13px;
+.yoyoyo:hover{
+background-color:#106270;
+}
+
+.work-wrapper{
+	height:1000px;
+	background-color:#f6f6f6;
+	text-align:center;
+}
+
+.heading{
+	padding-top:30px;
+	padding-bottom:60px;
+}
+
+.work{
+	width:25%;
 	float:left;
+}
+
+.genre{
+	height:25px;
+}
+
+.genre p{
+	line-height:25px;
+	font-weight:bold;
+	margin-left:5px;
+	color:#fff;
+	display:inline;
 }
 
 .c{
-	width:400px;
-	height:30px;
 	background-color:#9a4fe9;
 }
 
-.object p{
-	display:inline;
-	font-size:20px;
+.title{
+	height:50px;
+}
+
+.title a{
+	font-size:30px;
 	font-weight:bold;
-	color:#fff;
-	padding-left:5px;
-}
-
-.image{
-	width:400px;
-	height:400px;
-	background-image:url(nav/C/img/othello.png);
-	background-size:contain;
-	background-repeat:no-repeat;
-}
-
-.content{
-	width:400px;
-	height:100px;
-	text-align:center;
-}
-
-.content a{
-	font-size:40px;
-	font-weight:bold;
-	border-bottom:5px double #0090a8;
-	color:#000;
+	line-height:50px;
+	color:#5c5c5c;
 	text-decoration:none;
-	transition:0.2s;
 }
 
-.content a:hover{
+.title a:hover{
 	color:#0090a8;
-	padding:0px 30px;
+}
+
+.work img{
+	width:100%;
+}
+
+.txt-contents{
+	width:80%;
+	font-size:15px;
+	line-height:17px;
+	display:inline-block;
+	color:#5c5c5c;
 }

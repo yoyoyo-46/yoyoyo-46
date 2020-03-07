@@ -107,8 +107,9 @@ background-color:#106270;
 
 @media(max-width:559px){
 	.top-wrapper h1{
-		font-size:40px;
-		line-height:60px;
+		font-size:35px;
+		letter-spacing:3px;
+		line-height:50px;
 	}
 
 	.top-wrapper p{

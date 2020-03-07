@@ -1,10 +1,7 @@
 .top-wrapper{
 	padding-top:300px;
-	padding-bottom:160px;
 	background-image:url(img/top.jpg);
 	background-size:cover;
-	color:#fff;
-	text-align:center;
 	opacity:0.9;
 }
 
@@ -34,16 +31,27 @@ background-color:#106270;
 	text-align:center;
 }
 
-.heading{
-	padding-top:30px;
-	padding-bottom:60px;
+.work{
+	display:block;
+	width:25%;
+	padding:10px 10px;
+	border-radius:10px;
+	margin-bottom:100px;
+	background-color:#efdfff;
+	box-shadow:5px 5px #eee;
+	transition:0.3s;
+	float:left;
 }
 
-.work{
-	width:25%;
-	padding:0px 10px;
-	margin-bottom:100px;
-	float:left;
+.work:hover{
+	opacity:0.8;
+}
+
+.work:active{
+	position:relative;
+	top:5px;
+	left:5px;
+	box-shadow:none;
 }
 
 .genre{
@@ -66,16 +74,12 @@ background-color:#106270;
 	height:50px;
 }
 
-.title a{
+.title p{
+	display:inline;
 	font-size:30px;
 	font-weight:bold;
 	line-height:50px;
 	color:#5c5c5c;
-	text-decoration:none;
-}
-
-.title a:hover{
-	color:#0090a8;
 }
 
 .work img{

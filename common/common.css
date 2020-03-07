@@ -3,16 +3,18 @@
 	margin:0px;
 	padding:0px;
 	line-height:1em;
+	box-sizing:border-box;
+}
+
+.clear{
+	clear:left;
 }
 
 .container{
-	width:980px;
+	max-width:1280px;
+	width:100%;
 	padding:0px 10px;
 	margin:0px auto;
-}
-
-article{
-	width:100%;
 }
 
 .btn{
@@ -37,7 +39,6 @@ h3{
 
 
 header{
-	height:50px;
 	width:100%;
 	padding-top:10px;
 	padding-bottom:15px;
@@ -62,7 +63,12 @@ header{
 	height:50px;
 }
 
-.logo:hover{
+.header-left a{
+	text-decoration:none;
+	color:#000;
+}
+
+.header-left a:hover{
 	opacity:0.8;
 }
 
@@ -100,20 +106,19 @@ header{
 }
 
 .nav1{
-	height:40px;
 	width:100%;
-	background-color:rgba(193, 193, 193, 0.6);
+	background-color:#0090a8;
 	position:fixed;
-	top:80px;
+	top:85px;
 	z-index:10;
+	text-align:center;
 }
 
 .nav1 a{
 	display:inline-block;
-	width:150px;
+	width:16%;
 	font-size:20px;
 	padding:10px 0px;
-	margin:0px 4.2px;
 	border-bottom:0px;
 	color:#fff;
 	background-color:#0090a8;
@@ -155,6 +160,10 @@ header{
 .Python:hover{
 	border-bottom:5px solid #00b6e2;
 	background-color:#a3ecfc;
+}
+
+article{
+	width:100%;
 }
 
 footer{

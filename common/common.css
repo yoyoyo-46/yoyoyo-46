@@ -6,6 +6,10 @@
 	box-sizing:border-box;
 }
 
+a{
+	text-decoration:none;
+}
+
 .clear{
 	clear:left;
 }
@@ -23,7 +27,6 @@
 	color:#fff;
 	display:inline-block;
 	text-align:center;
-	text-decoration:none;
 }
 
 h2{
@@ -64,7 +67,6 @@ header{
 }
 
 .header-left a{
-	text-decoration:none;
 	color:#000;
 }
 
@@ -123,7 +125,6 @@ header{
 	color:#fff;
 	background-color:#0090a8;
 	text-align:center;
-	text-decoration:none;
 	transition:0.3s;
 }
 
@@ -203,7 +204,6 @@ footer{
 	color:#fff;
 	transition:0.2s;
 	display:inline-block;
-	text-decoration:none;
 }
 
 .link:hover{

@@ -17,12 +17,12 @@
 
 .yoyoyo{
 	margin-top:100px;
-	background-color:#0090a8;
+	background-color:rgba(0, 144, 168, 0.8);
 	transition:0.3s;
 }
 
 .yoyoyo:hover{
-background-color:#106270;
+background-color:#0090a8;
 }
 
 .work-wrapper{

@@ -29,30 +29,30 @@
 }
 
 .item{
-	color:#707070;
+	color:#5c5c5c;
 }
 
 .answer{
 	font-weight:bold;
-	color:#555555;
+	color:#5c5c5c;
 }
 
 .dgtack{
 	width:30%;
 	margin:0px auto;
-	background-color:#0090a8;
-	opacity:0.8;
-	box-shadow:0px 3px #0f6270;
+	background-color:rgba(0, 144, 168, 0.8);
+	box-shadow:0px 5px rgba(0, 96, 112, 0.8);
 }
 
 .dgtack:hover{
-	opacity:1;
+	background-color:#0090a8;
+	box-shadow:0px 5px #006070;
 }
 
 .dgtack:active{
 	box-shadow:none;
 	position:relative;
-	top:3px;
+	top:5px;
 }
 
 @media(max-width:959px){

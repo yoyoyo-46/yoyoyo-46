@@ -2,6 +2,7 @@
 <html lang="ja">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="twitter:card" content="Summary" />
 		<meta name="twitter:site" content="@dgtack25" />
 		<meta name=“twitter:creator” content=“@dgtack25” />
@@ -9,8 +10,9 @@
 		<meta property="og:title" content="よよよの部屋 | よよよについて" />
 		<meta property="og:description" content="このサイトを作り、更新し、紹介しているプログラムを作っているのもよよよです。" />
 		<meta property="og:image" content="https://yoyoyo-46.github.io/yoyoyo-46/common/img/yoyoyo_logo.jpg" />
-		<link rel="stylesheet" href="yoyoyo.css">
 		<link rel="stylesheet" href="../common/common.css">
+    <link rel="stylesheet" href="../common/responsive.css">
+		<link rel="stylesheet" href="yoyoyo.css">
 		<link rel="shortcut icon" href="../common/img/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="../common/img/apple-touch-icon-180x180.png" sizes="180x180">
 		<link rel="icon" href="../common/img/android-touch-icon-192x192.png" type="image/png" sizes="192x192">
@@ -18,59 +20,85 @@
 	</head>
 	<body>
 		<header>
-			<a href="../index.html"><img src="../common/img/yoyoyo_logo.jpg"></a>
-
-			<p>YO<span>Y</span>OYO's room</p>
+			<div class="container">
+				<div class="header-left">
+					<a href="../index.html"><img src="../common/img/yoyoyo_logo.jpg" class="logo"><h1>OYOYO'S ROOM</h1></a>
+				</div>
+				<div class="header-right">
+					<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/index.html"><img src="../common/img/line.jpg" class="line"></a>
+					<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/index.html&via=dgtack25&hashtags=よよよの部屋"><img src="../common/img/twitter.jpg" class="twitter"></a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/index.html"><img src="../common/img/facebook.png" class="facebook"></a>
+				</div>
+				<div class="clear">
+			</div>
 		</header>
 
 		<nav class=nav1>
-			<a href="../nav/C/C.html" class="C">C言語</a>
-			<a href="../nav/HTMLCSS/HTMLCSS.html" class="HTMLCSS">HTML&CSS</a>
-			<a href="../nav/JavaScript/JavaScript.html" class="JavaScript">JavaScript</a>
-			<a href="../nav/Ruby/Ruby.html" class="Ruby">Ruby</a>
-			<a href="../nav/Java/Java.html" class="Java">Java</a>
-			<a href="../nav/Python/Python.html" class="Python">Python</a>
+			<div class="container">
+				<a href="../nav/C/C.html" class="C">C言語</a>
+				<a href="../nav/HTMLCSS/HTMLCSS.html" class="HTMLCSS">HTML&CSS</a>
+				<a href="../nav/JavaScript/JavaScript.html" class="JavaScript">JavaScript</a>
+				<a href="../nav/Ruby/Ruby.html" class="Ruby">Ruby</a>
+				<a href="../nav/Java/Java.html" class="Java">Java</a>
+				<a href="../nav/Python/Python.html" class="Python">Python</a>
+			</div>
 		</nav>
 
-		<article>
-			<h1>よよよについて</h1>
-
-			<p>こんにちは、よよよです。</p>
-			<p>このサイトを作り、更新し、紹介しているプログラムも作っています。</p><br>
-			<p>この先はよよよのプロフィールです。</p>
+		<article class="top-wrapper">
+			<div class="container">
+				<div class="heading">
+					<h2>よよよについて</h2>
+					<h3>ー About Yoyoyo ー</h3>
+				</div>
+				<p>こんにちは、よよよです。</p>
+				<p>このサイトを作り、更新し、紹介しているプログラムも作っています。</p>
+			</div>
 		</article>
 
-		<article>
-			<p class="title">出身地</p>
-			<h1>北海道</h1>
-			<p class="title">所属校</p>
-			<h1>某高専</h1>
-			<p class="title">所属学科</p>
-			<h1>情報科</h1>
-			<p class="title">生年月日</p>
-			<h1>2002/4/23</h1>
-			<p class="title">趣味</p>
-			<h1>映画鑑賞</h1>
-			<p class="title">好きなアイドル</p>
-			<h1>欅坂46</h1>
-			<p class="title">Twitter</p>
-			<a href="https://twitter.com/dgtack25">@dgtack25</a>
-		</article>
-
-		<article>
-			<p>見てもらった通り私はまだ学生なので、プログラムの書き方などは大目に見てください。</p><br>
-			<p>さいごに、フッターのSNSアイコンからこのサイトを共有してもらえると嬉しいです。</p>
+		<article class="profile-wrapper">
+			<div class="container">
+				<div class="heading">
+					<h2>プロフィール</h2>
+					<h3>ー Profile ー</h3>
+				</div>
+				<div class="profile">
+					<p class="item">名前</p>
+					<p class="answer">よよよ</p>
+					<p class="item">性別</p>
+					<p class="answer">男</p>
+					<p class="item">生年月日</p>
+					<p class="answer">2002/4/23</p>
+					<p class="item">血液型</p>
+					<p class="answer">O型</p>
+					<p class="item">出身地</p>
+					<p class="answer">北海道</p>
+					<p class="item">所属校</p>
+					<p class="answer">某高専</p>
+					<p class="item">所属学科</p>
+					<p class="answer">情報</p>
+					<p class="item">趣味</p>
+					<p class="answer">映画鑑賞</p>
+					<p class="item">特技</p>
+					<p class="answer">一手詰め将棋</p>
+					<p class="item">好きなアーティスト</p>
+					<p class="answer">欅坂46</p>
+				</div>
+				<a href="https://twitter.com/dgtack25" class="btn dgtack">Twitter → @dgtack25</a>
+			</div>
 		</article>
 
 		<footer>
-			<p>YO<span>Y</span>OYO's room</p>
-
-			<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/yoyoyo/yoyoyo.html"><img src="../common/img/line.png" class="line"></a>
-			<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/yoyoyo/yoyoyo.html&via=dgtack25&hashtags=よよよの部屋"><img src="../common/img/twitter.png" class="twitter"></a>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/yoyoyo/yoyoyo.html"><img src="../common/img/facebook.png" class="facebook"></a>
-			<a href="../footer/contact us/contact us.html" class="link">お問い合わせ</a>
-			<a href="../footer/this_site/this_site.html" class="link">このサイトについて</a>
-			<a href="../index.html" class="link">ホーム</a>
+			<div class="container">
+				<div class="footer-left">
+					<h3>WELCOME TO</h3>
+					<h2>YOYOYO'S ROOM</h2>
+				</div>
+				<div class="footer-right">
+					<a href="../index.html" class="link">ホーム</a>
+					<a href="../footer/this_site/this_site.html" class="link">このサイトについて</a>
+					<a href="../footer/contact us/contact us.html" class="link">お問い合わせ</a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>

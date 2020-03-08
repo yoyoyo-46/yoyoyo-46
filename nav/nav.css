@@ -7,6 +7,11 @@
 	background-color:#9a4fe9;
 }
 
+.htmlcss{
+	color:#afffd6;
+	background-color:#49ba80;
+}
+
 .work-wrapper{
 	padding-bottom:50px;
 	background-color:#f6f6f6;
@@ -67,10 +72,26 @@
 	.work{
 		width:48%;
 	}
+
+	.htmlcss h2{
+		font-size:27px;
+	}
+
+	.htmlcss h3{
+		font-size:17px;
+	}
 }
 
 @media(max-width:559px){
 	.work{
 		width:98%;
+	}
+
+	.htmlcss h2{
+		font-size:23px;
+	}
+
+	.htmlcss h3{
+		font-size:13px;
 	}
 }

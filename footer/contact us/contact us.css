@@ -5,6 +5,7 @@
 }
 
 .contact-wrapper{
+  height:600px;
   padding:50px 0px;
   background-color:#f6f6f6;
 }
@@ -31,12 +32,20 @@ textarea{
 .submit{
   width:100px;
   background-color:rgba(0, 144, 168, 0.8);
+  box-shadow:0px 5px rgba(0, 96, 112, 0.8);
   transition:0.3s;
   cursor:pointer;
 }
 
 .submit:hover{
   background-color:#0090a8;
+  box-shadow:0px 5px #006070;
+}
+
+.submit:active{
+  position:relative;
+  top:5px;
+  box-shadow:none;
 }
 
 .center{

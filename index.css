@@ -38,13 +38,18 @@ background-color:#0090a8;
 	border-radius:10px;
 	margin-bottom:100px;
 	background-color:#efdfff;
+	box-shadow:0px 5px #e0e0e0;
 	float:left;
 }
 
 .work:hover{
+	opacity:0.9;
+}
+
+.work:active{
 	position:relative;
-	bottom:5px;
-	box-shadow:0px 5px #e0e0e0;
+	top:5px;
+	box-shadow:none;
 }
 
 .genre{

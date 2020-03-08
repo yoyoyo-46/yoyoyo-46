@@ -4,7 +4,8 @@
 }
 
 .top-wrapper p{
-	padding:5px 0px;
+	height:20px;
+	line-height:20px;
 }
 
 .profile-wrapper{

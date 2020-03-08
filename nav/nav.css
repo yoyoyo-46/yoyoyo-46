@@ -17,9 +17,19 @@
 	background-color:#274eb1;
 }
 
+.ruby{
+	color:#fbb2c0;
+	background-color:#e23254;
+}
+
 .java{
 	color:#e0c79c;
 	background-color:#9d793c;
+}
+
+.python{
+	color:#a3ecfc;
+	background-color:#00b6e2;
 }
 
 .work-wrapper{

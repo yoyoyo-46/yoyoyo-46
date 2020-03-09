@@ -72,12 +72,12 @@
 				<h2 class="title">下準備</h2>
 				<p>では早速ですが作っていきましょう。オセロを作るにあたって絶対欠かせないのが二次元配列です。今回も勿論これを使用します。配列名をblock 要素数を8とした二次元配列をint型で宣言します。</p>
 				<pre><code>
-				1	#include&lt;stdio.h&gt;
-				2	int main(void){
-				3		int block[8][8];
-				4
-				5		return 0;
-				6	}
+ #include&lt;stdio.h&gt;
+ int main(void){
+ 	int block[8][8];
+
+ 	return 0;
+ }
 				</code></pre>
 				<p>これで下準備は完了です。</p>
 			</div>
@@ -85,35 +85,210 @@
 				<h2 class="title">盤面の表示</h2>
 				<p>ここからは本格的に作業に入ります。まずオセロの盤面がないことには何も始まらないので、盤面を表示する関数を作っていきましょう。関数名をbord 仮引数をblock配列にし、void型で宣言します。今回は使う関数がとても多いので全てプロトタイプ宣言とします。</p>
 				<pre><code>
-				1	#include&lt;stdio.h&gt;
-				2
-				3	void bord(int block[][8]);
-				4
-				5	int main(void){
-				6		int block[8][8];
-				7
-				8		return 0;
-				9	}
+ #include&lt;stdio.h&gt;
+
+ void bord(int block[][8]);//盤面を表示する関数
+
+  int main(void){
+  	int block[8][8];
+
+  	return 0;
+  }
 				</code></pre>
+			</div>
+			<div class="content">
+				<p>ここで表示したい盤面をイメージしてみましょう。本物そっくりに作るのは無理があるのでマスごとに区切られていれば良いでしょう。ということで、今回はこのような盤面を表示します。</p>
+				<pre><code>
+    |a  |b  |c  |d  |e  |f  |g  |h  |
+ --+--+--+--+--+--+--+--+--+
+  1|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  2|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  3|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  4|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  5|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  6|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  7|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  8|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+				</code></pre>
+				<p>※表示する際に縦線が少しずれてしまいましたが、実際に書くときは縦線の間に半角スペースを２つ入れると、ずれることはないと思います。</p>
+			</div>
+			<div class="content">
+				<p>盤面がイメージ出来たらあとは書いていくだけです。上の2行はprintfでそのまま表示し、それ以降の行は2つのfor文を入れ子にし表示します。</p>
+
+				<pre><code>
+	 return 0;
+ }
+
+ void bord(int block[][8]) {
+	 int i, j;
+
+	 printf("   |a  |b  |c  |d  |e  |f  |g  |h  |\n");
+	 printf("--+--+--+--+--+--+--+--+--+\n");
+
+	 for (i = 0; i < 8; i++) {
+		 printf("%2d|", i + 1);
+		 for (j = 0; j < 8; j++) {
+			 printf("  ");
+			 putchar('|');
+		 }
+		 putchar('\n');
+		 printf("--+--+--+--+--+--+--+--+--+\n");
+	 }
+ }
+				</code></pre>
+			</div>
+			<div class="content">
+				<p>ここで一度bord関数を呼び出してみましょう。block配列を実引数にしてmain関数へ書き込みます。</p>
+				<pre><code>
+ #include&lt;stdio.h&gt;
+
+ void bord(int block[][8]);//盤面を表示する関数
+
+ int main(void){
+ 	int block[8][8];
+
+	block(block);
+
+ 	return 0;
+ }
+
+ void bord(int block[][8]) {
+	 int i, j;
+				</code></pre>
+				<p>実行してみましょう。ここで先ほどの盤面が表示されるとひとまず成功です。</p>
+			</div>
+			<div class="content">
+				<p>ここまでの工程で盤面の基礎ができました。しかしこの関数は駒が置かれるたびに使用します。つまり、2つ目のfor文のprintfの中身を変え、駒も表示できるようにしなくてはなりません。</p>
+				<pre><code>
+ printf("   |a  |b  |c  |d  |e  |f  |g  |h  |\n");
+ printf("--+--+--+--+--+--+--+--+--+\n");
+
+ for (i = 0; i < 8; i++) {
+ 	 printf("%2d|", i + 1);
+
+	 for (j = 0; j < 8; j++) {
+		 if (block[i][j] == 0) {
+		  	printf("  ");
+		 }
+		 else if (block[i][j] == 1) {
+		  	printf("〇");
+		 }
+		 else if (block[i][j] == 2) {
+		  	printf("●");
+		 }
+		 else if (block[i][j] == 3) {
+			  printf("・");
+		 }
+		 putchar('|');
+	 }
+				</code></pre>
+				<p>こうすることでblock配列の中身が0ならスペース 1なら黒(※主なコンソール画面は背景が黒の場合が多く、色が反転してしまうため〇を黒として扱います) 2なら白 3なら・(※駒が置けるときのマーク)がそれぞれ表示されるようになりました。</p>
+			</div>
+			<div class="content">
+				<p>しかし　０＝スペース　１＝黒　だと直感的に理解しづらいですよね。そこでマクロ置換をし、直感的にもわかりやすくします。</p>
+				<pre><code>
+ #include&lt;stdio.h&gt;
+
+ #define SPACE 0
+ #define BLACK 1
+ #define WHITE 2
+ #define POINT 3
+
+ void bord(int block[][8]);//盤面を表示する関数
+				</code></pre>
+				<pre><code>
+ printf("  |a |b |c |d |e |f |g |h |\n");
+ printf("--+--+--+--+--+--+--+--+--+\n");
+
+ for (i = 0; i < 8; i++) {
+	 printf("%2d|", i + 1);
+
+	 for (j = 0; j < 8; j++) {
+		 if (block[i][j] == SPACE) {
+			 printf("  ");
+		 }
+		 else if (block[i][j] == BLACK) {
+			 printf("〇");
+		 }
+		 else if (block[i][j] == WHITE) {
+			 printf("●");
+		 }
+		 else if (block[i][j] == POINT) {
+			 printf("・");
+		 }
+		 putchar('|');
+	 }
+				</code></pre>
+				<p>これにより、表示したい駒をそのまま書くだけで表示できるようになりました。</p>
+			</div>
+			<div class="content">
+				<p>さて盤面の表示もあと少しです。駒を表示する方法は完成したので、あとはblock配列に数値を代入し駒を置いていきましょう。</p>
+				<pre><code>
+ int main(void){
+	 int block[8][8] = {SPACE};
+
+	 block[3][3] = WHITE; block[3][4] = BLACK;
+	 block[4][3] = BLACK; block[4][4] = WHITE;
+
+	 block(block);
+
+	 return 0;
+ }
+				</code></pre>
+				<p>配列の中身をすべてスペースにし、中央の4つを白と黒にします。ここで実行してみましょう。</p>
+			</div>
+			<div class="content">
+				<pre><code>
+    |a  |b  |c  |d  |e  |f  |g  |h  |
+ --+--+--+--+--+--+--+--+--+
+  1|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  2|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  3|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  4|    |    |   |● |〇 |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  5|    |    |   |〇 |● |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  6|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  7|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+  8|    |    |   |    |    |   |    |    |
+ --+--+--+--+--+--+--+--+--+
+				</code></pre>
+				<p>実行結果がこのようになると成功です。これで盤面の表示は完了です。</p>
 			</div>
 		</article>
 
-		<article class="share">
-			<p>共有する</p><br>
+		<article class="share-wrapper">
+			<h2>共有する</h2>
+			<h3>ー Share ー</h3>
 
-			<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" class="line"><img src="../../img/line.jpg"></a>
+			<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html"><img src="../../img/line.jpg" class="line"></a>
 
-			<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html&via=dgtack25&hashtags=よよよの部屋" class="twitter"><img src="../../img/twitter.jpg"></a>
+			<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html&via=dgtack25&hashtags=よよよの部屋"><img src="../../img/twitter.jpg" class="twitter"></a>
 
-			<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" class="facebook"><img src="../../img/facebook.png"></a>
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html"><img src="../../img/facebook.png" class="facebook"></a>
 
-			<a href="https://b.hatena.ne.jp/add?mode=confirm&url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" target="_blank" class="hatena"><img src="../../img/hatena.png"></a>
+			<a href="https://b.hatena.ne.jp/add?mode=confirm&url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" target="_blank"><img src="../../img/hatena.png" class="hatena"></a>
 
-			<a href="https://getpocket.com/edit?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" target="_blank" rel="nofollow" class="pocket"><img src="../../img/pocket.png"></a>
+			<a href="https://getpocket.com/edit?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1.html" target="_blank" rel="nofollow"><img src="../../img/pocket.png" class="pocket"></a>
 		</article>
 
-		<a class="back">前へ</a>
-		<a class="next">次へ</a>
+		<article class="skip-wrapper">
+			<a class="back">前へ</a>
+			<a class="next">次へ</a>
+		</article>
 
 		<footer>
 			<div class="container">

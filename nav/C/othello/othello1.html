@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="twitter:card" content="Summary" />
+		<meta name="twitter:site" content="@dgtack25" />
+		<meta name=“twitter:creator” content=“@dgtack25” />
+		<meta property="og:url" content="https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" />
+		<meta property="og:title" content="よよよの部屋｜オセロ①" />
+		<meta property="og:description" content="C言語でオセロを作る【Part1】" />
+		<meta property="og:image" content="https://yoyoyo-46.github.io/yoyoyo-46/nav/C/img/othello.png" />
+		<link rel="stylesheet" href="../../../../common/common.css">
+    <link rel="stylesheet" href="../../../../common/responsive.css">
+		<link rel="stylesheet" href="../../../article.css">
+		<link rel="shortcut icon" href="../../../../common/img/favicon.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" href="../../../../common/img/apple-touch-icon-180x180.png" sizes="180x180">
+		<link rel="icon" href="../../../../common/img/android-touch-icon-192x192.png" type="image/png" sizes="192x192">
+		<title>よよよの部屋 | オセロ①</title>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header-left">
+					<a href="../../../../index.html"><img src="../../../../common/img/yoyoyo_logo.jpg" class="logo"><h1>OYOYO'S ROOM</h1></a>
+				</div>
+				<div class="header-right">
+					<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html"><img src="../../../../common/img/line.jpg" class="line"></a>
+					<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html&via=dgtack25&hashtags=よよよの部屋"><img src="../../../../common/img/twitter.jpg" class="twitter"></a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html"><img src="../../../../common/img/facebook.png" class="facebook"></a>
+				</div>
+				<div class="clear">
+			</div>
+		</header>
+
+		<nav class=nav1>
+			<div class="container">
+				<a href="../../C.html" class="C">C言語</a>
+				<a href="../../../HTMLCSS/HTMLCSS.html" class="HTMLCSS">HTML&CSS</a>
+				<a href="../../../JavaScript/JavaScript.html" class="JavaScript">JavaScript</a>
+				<a href="../../../Ruby/Ruby.html" class="Ruby">Ruby</a>
+				<a href="../../../Java/Java.html" class="Java">Java</a>
+				<a href="../../../Python/Python.html" class="Python">Python</a>
+			</div>
+		</nav>
+
+		<nav class=nav2>
+			<a href="othello1.html" class="now">Part.1</a>
+			<a>Part.2</a>
+			<a>Part.3</a>
+			<a>Part.4</a>
+			<a>Part.5</a>
+			<a>Part.6</a>
+			<a>Part.7</a>
+			<a>Part.8</a>
+		</nav>
+
+		<article class="top-wrapper c">
+			<div class="heading">
+				<h2>C言語でオセロを作る</h2>
+				<h3>ー Part.1 ー</h3>
+			</div>
+			<p>到達目標の確認から、盤面を表示させる関数 "bord関数" の完成まで。</p>
+		</article>
+
+		<article class="content-wrapper">
+			<div class="content">
+				<h2 class="title">はじめに</h2>
+				<p>今回作るオセロは、隣の人が対戦相手、駒が置けるところにポインターを表示（コレ →・）駒を置くときは座標指定、です。ほかにも制限はありますが、その時々で説明します。</p>
+			</div>
+			<div class="content">
+				<h2 class="title">下準備</h2>
+				<p>では早速ですが作っていきましょう。オセロを作るにあたって絶対欠かせないのが二次元配列です。今回も勿論これを使用します。配列名をblock 要素数を8とした二次元配列をint型で宣言します。</p>
+				<pre><code>
+				1	#include&lt;stdio.h&gt;
+				2	int main(void){
+				3		int block[8][8];
+				4
+				5		return 0;
+				6	}
+				</code></pre>
+				<p>これで下準備は完了です。</p>
+			</div>
+			<div class="content">
+				<h2 class="title">盤面の表示</h2>
+				<p>ここからは本格的に作業に入ります。まずオセロの盤面がないことには何も始まらないので、盤面を表示する関数を作っていきましょう。関数名をbord 仮引数をblock配列にし、void型で宣言します。今回は使う関数がとても多いので全てプロトタイプ宣言とします。</p>
+				<pre><code>
+				1	#include&lt;stdio.h&gt;
+				2
+				3	void bord(int block[][8]);
+				4
+				5	int main(void){
+				6		int block[8][8];
+				7
+				8		return 0;
+				9	}
+				</code></pre>
+			</div>
+		</article>
+
+		<article class="share">
+			<p>共有する</p><br>
+
+			<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" class="line"><img src="../../../img/line.jpg"></a>
+
+			<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html&via=dgtack25&hashtags=よよよの部屋" class="twitter"><img src="../../../img/twitter.jpg"></a>
+
+			<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" class="facebook"><img src="../../../img/facebook.png"></a>
+
+			<a href="https://b.hatena.ne.jp/add?mode=confirm&url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" target="_blank" class="hatena"><img src="../../../img/hatena.png"></a>
+
+			<a href="https://getpocket.com/edit?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" target="_blank" rel="nofollow" class="pocket"><img src="../../../img/pocket.png"></a>
+		</article>
+
+		<a class="back">前へ</a>
+		<a class="next">次へ</a>
+
+		<footer>
+			<div class="container">
+				<div class="footer-left">
+					<h3>WELCOME TO</h3>
+					<h2>YOYOYO'S ROOM</h2>
+				</div>
+				<div class="footer-right">
+					<a href="../../../../index.html" class="link">ホーム</a>
+					<a href="../../../../footer/this_site/this_site.html" class="link">このサイトについて</a>
+					<a href="../../../../footer/contact/contact.html" class="link">お問い合わせ</a>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

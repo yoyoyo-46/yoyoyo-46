@@ -2,15 +2,17 @@
 <html lang="ja">
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="twitter:card" content="Summary" />
 		<meta name="twitter:site" content="@dgtack25" />
 		<meta name=“twitter:creator” content=“@dgtack25” />
 		<meta property="og:url" content="https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html" />
 		<meta property="og:title" content="よよよの部屋｜オセロ①" />
 		<meta property="og:description" content="C言語でオセロを作る【Part1】" />
-		<meta property="og:image" content="https://3.bp.blogspot.com/-hRiScUsWZHk/VA7mVasETMI/AAAAAAAAmOg/OHTyO2Zjxck/s800/othello_game.png" />
-		<link rel="stylesheet" href="../../../article.css">
+		<meta property="og:image" content="https://yoyoyo-46.github.io/yoyoyo-46/nav/C/img/othello.png" />
 		<link rel="stylesheet" href="../../../../common/common.css">
+    <link rel="stylesheet" href="../../../../common/responsive.css">
+		<link rel="stylesheet" href="../../../article.css">
 		<link rel="shortcut icon" href="../../../../common/img/favicon.ico" type="image/x-icon">
 		<link rel="apple-touch-icon" href="../../../../common/img/apple-touch-icon-180x180.png" sizes="180x180">
 		<link rel="icon" href="../../../../common/img/android-touch-icon-192x192.png" type="image/png" sizes="192x192">
@@ -18,17 +20,28 @@
 	</head>
 	<body>
 		<header>
-			<a href="../../../../index.html"><img src="../../../../common/img/yoyoyo_logo.jpg"></a>
-
-			<p>YO<span>Y</span>OYO's room</p>
+			<div class="container">
+				<div class="header-left">
+					<a href="../../../../index.html"><img src="../../../../common/img/yoyoyo_logo.jpg" class="logo"><h1>OYOYO'S ROOM</h1></a>
+				</div>
+				<div class="header-right">
+					<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html"><img src="../../../../common/img/line.jpg" class="line"></a>
+					<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html&via=dgtack25&hashtags=よよよの部屋"><img src="../../../../common/img/twitter.jpg" class="twitter"></a>
+					<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/C.html"><img src="../../../../common/img/facebook.png" class="facebook"></a>
+				</div>
+				<div class="clear">
+			</div>
 		</header>
+
 		<nav class=nav1>
-			<a href="../../C.html" class="C">C言語</a>
-			<a href="../../../HTMLCSS/HTMLCSS.html" class="HTMLCSS">HTML&CSS</a>
-			<a href="../../../JavaScript/JavaScript.html" class="JavaScript">JavaScript</a>
-			<a href="../../../Ruby/Ruby.html" class="Ruby">Ruby</a>
-			<a href="../../../Java/Java.html" class="Java">Java</a>
-			<a href="../../../Python/Python.html" class="Python">Python</a>
+			<div class="container">
+				<a href="../../C.html" class="C">C言語</a>
+				<a href="../../../HTMLCSS/HTMLCSS.html" class="HTMLCSS">HTML&CSS</a>
+				<a href="../../../JavaScript/JavaScript.html" class="JavaScript">JavaScript</a>
+				<a href="../../../Ruby/Ruby.html" class="Ruby">Ruby</a>
+				<a href="../../../Java/Java.html" class="Java">Java</a>
+				<a href="../../../Python/Python.html" class="Python">Python</a>
+			</div>
 		</nav>
 
 		<nav class=nav2>
@@ -42,78 +55,47 @@
 			<a>Part.8</a>
 		</nav>
 
-		<article>
-			<h1>C言語でオセロを作る　Part.1</h1>
-
-			<p class="tytle">はじめに</p>
-			<p>今回作るオセロの完成条件は、①普通にオセロができる　②先攻後攻を選ぶことができる　③対戦相手はコンピューター　この3つです。ほかにも作っている途中に機能は増やしますが、最低限この3つは入れたいと思います。</p>
+		<article class="top-wrapper c">
+			<div class="heading">
+				<h2>C言語でオセロを作る</h2>
+				<h3>ー Part.1 ー</h3>
+			</div>
+			<p>到達目標の確認から、盤面を表示させる関数 "bord関数" の完成まで。</p>
 		</article>
 
-		<article>
-			<p class="tytle">下準備</p>
-			<p>では早速ですが作っていきましょう。オセロを作るにあたって絶対欠かせないのが二次元配列です。今回も勿論これを使用します。まずおまじないと呼ばれる定型文を書き、配列名をblock 要素数を8とした二次元配列をint型で宣言します。</p>
-
-			<img src="img/code1.png">
-
-			<p>これで下準備は完了です。</p>
-		</article>
-
-		<article>
-			<p class="tytle">盤面の表示</p>
-			<p>ここからは本格的に作業に入ります。まずオセロの盤面がないことには何も始まらないので、盤面を表示する関数を作っていきましょう。関数名をbord 仮引数をblock配列にし、void型で宣言します。今回は使う関数がとても多いので全てプロトタイプ宣言とします。</p>
-
-			<img src="img/code2.png">
-		</article>
-
-		<article>
-			<p>ここで表示したい盤面をイメージしてみましょう。本物そっくりに作るのは無理があるのでマスごとに区切られていれば良いでしょう。ということで、今回はこのような盤面を表示します。</p>
-
-			<img src="img/result1.png">
-		</article>
-
-		<article>
-			<p>盤面がイメージ出来たらあとは書いていくだけです。上の2行はprintfでそのまま表示し、それ以降の行は2つのfor文を入れ子にし表示します。</p>
-
-			<img src="img/code3.png">
-		</article>
-
-		<article>
-			<p>ここで一度bord関数を呼び出してみましょう。block配列を実引数にしてmain関数へ書き込みます。</p>
-
-			<img src="img/code4.png">
-
-			<p>実行してみましょう。ここで先ほどの盤面が表示されるとひとまず成功です。</p>
-		</article>
-
-		<article>
-			<p>ここまでの工程で盤面の基礎ができました。しかしこの関数は駒が置かれるたびに使用します。つまり、2つ目のfor文のprintfの中身を変え、駒も表示できるようにしなくてはなりません。</p>
-
-			<img src="img/code5.png">
-
-			<p>こうすることでblock配列の中身が0ならスペース 1なら黒(※主なコンソール画面は背景が黒の場合が多く、色が反転してしまうため〇を黒として扱います) 2なら白 3なら・(※駒が置けるときのマーク)がそれぞれ表示されるようになりました。</p>
-		</article>
-
-		<article>
-			<p>しかし　０＝スペース　１＝黒　だと直感的に理解しづらいですよね。そこでマクロ置換をし、直感的にもわかりやすくします。</p>
-
-			<img src="img/code6.png">
-			<img src="img/code7.png">
-
-			<p>これにより、表示したい駒をそのまま書くだけで表示できるようになりました。</p>
-		</article>
-
-		<article>
-			<p>さて盤面の表示もあと少しです。駒を表示する方法は完成したので、あとはblock配列に数値を代入し駒を置いていきましょう。</p>
-
-			<img src="img/code8.png">
-
-			<p>配列の中身をすべてスペースにし、中央の4つを白と黒にします。ここで実行してみましょう。</p>
-		</article>
-
-		<article>
-			<img src="img/result2.png">
-
-			<p>実行結果がこのようになると成功です。これで盤面の表示は完了です。</p>
+		<article class="content-wrapper">
+			<div class="content">
+				<h2 class="title">はじめに</h2>
+				<p>今回作るオセロは、隣の人が対戦相手、駒が置けるところにポインターを表示（コレ →・）駒を置くときは座標指定、です。ほかにも制限はありますが、その時々で説明します。</p>
+			</div>
+			<div class="content">
+				<h2 class="title">下準備</h2>
+				<p>では早速ですが作っていきましょう。オセロを作るにあたって絶対欠かせないのが二次元配列です。今回も勿論これを使用します。配列名をblock 要素数を8とした二次元配列をint型で宣言します。</p>
+				<pre><code>
+				1	#include&lt;stdio.h&gt;
+				2	int main(void){
+				3		int block[8][8];
+				4
+				5		return 0;
+				6	}
+				</code></pre>
+				<p>これで下準備は完了です。</p>
+			</div>
+			<div class="content">
+				<h2 class="title">盤面の表示</h2>
+				<p>ここからは本格的に作業に入ります。まずオセロの盤面がないことには何も始まらないので、盤面を表示する関数を作っていきましょう。関数名をbord 仮引数をblock配列にし、void型で宣言します。今回は使う関数がとても多いので全てプロトタイプ宣言とします。</p>
+				<pre><code>
+				1	#include&lt;stdio.h&gt;
+				2
+				3	void bord(int block[][8]);
+				4
+				5	int main(void){
+				6		int block[8][8];
+				7
+				8		return 0;
+				9	}
+				</code></pre>
+			</div>
 		</article>
 
 		<article class="share">
@@ -134,14 +116,17 @@
 		<a class="next">次へ</a>
 
 		<footer>
-			<p>YO<span>Y</span>OYO's room</p>
-
-			<a href="https://timeline.line.me/social-plugin/share?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html"><img src="../../../../common/img/line.png" class="line"></a>
-			<a href="https://twitter.com/intent/tweet?url=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html&via=dgtack25&hashtags=よよよの部屋"><img src="../../../../common/img/twitter.png" class="twitter"></a>
-			<a href="https://www.facebook.com/sharer/sharer.php?u=https://yoyoyo-46.github.io/yoyoyo-46/nav/C/othello/othello1/othello1.html"><img src="../../../../common/img/facebook.png" class="facebook"></a>
-			<a href="../../../../footer/contact us/contact us.html" class="link">お問い合わせ</a>
-			<a href="../../../../footer/this_site/this_site.html" class="link">このサイトについて</a>
-			<a href="../../../../index.html" class="link">ホーム</a>
+			<div class="container">
+				<div class="footer-left">
+					<h3>WELCOME TO</h3>
+					<h2>YOYOYO'S ROOM</h2>
+				</div>
+				<div class="footer-right">
+					<a href="../../../../index.html" class="link">ホーム</a>
+					<a href="../../../../footer/this_site/this_site.html" class="link">このサイトについて</a>
+					<a href="../../../../footer/contact/contact.html" class="link">お問い合わせ</a>
+				</div>
+			</div>
 		</footer>
 	</body>
 </html>
